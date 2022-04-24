@@ -1,10 +1,210 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Project</title>
-</head>
-<body>
-<h1>Hello world</h1>
-</body>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tapahtumat</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/container.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+
+  <body>
+    <header class="header container">
+      <a href="/" target="_blank" rel="noopener noreferrer" class="logo">
+        <img src="./images/Logo.png" alt="logo icon" width="16" height="16" />
+        Logo
+      </a>
+
+      <!-- Burger menu -->
+      <button
+        type="button"
+        class="menu-button"
+        aria-expanded="false"
+        aria-controls="menu"
+      >
+        <svg
+          class="burger-menu"
+          data-menu-button
+          width="24"
+          height="18"
+          aria-label="Menu switcher"
+        >
+          <use
+            class="icon-menu"
+            width="24"
+            height="16"
+            href="./images/SVG/sprite.svg#icon-menu"
+          ></use>
+          <use
+            class="icon-cross"
+            width="18"
+            height="18"
+            href="./images/SVG/sprite.svg#icon-close"
+          ></use>
+        </svg>
+      </button>
+
+      <nav>
+        <ul class="site-nav">
+          <li>
+            <a
+              href="http://"
+              class="nav-link active"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Search</a
+            >
+          </li>
+          <li>
+            <a
+              href="http://"
+              class="nav-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              >My events</a
+            >
+          </li>
+          <li>
+            <a
+              href="http://"
+              class="nav-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="http://"
+              class="nav-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Contact us</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="signIn-wrapper">
+        <button type="button" class="signIn-btn btn">Sign in</button>
+        <a
+          class="icon-person"
+          href="https://www.linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer Nofollow"
+        >
+          <svg class="icon-person-svg" width="20" height="20">
+            <use href="./images/SVG/symbol-defs.svg#icon-person"></use>
+          </svg>
+        </a>
+      </div>
+    </header>
+    <main>
+      <section class="hero container">
+        <div class="hero-title-img">
+          <div class="hero-title-wrapper">
+            <h1 class="hero-title">Discover best events</h1>
+            <span class="hero-title-small">All over the Helsinki</span>
+          </div>
+          <img
+            src="https://planetofhotels.com/guide/sites/default/files/styles/paragraph__live_banner__lb_image__1880bp/public/live_banner/Helsinki-1.jpg"
+            alt="hero image"
+            width="500"
+            height="350"
+            class="hero-img"
+          />
+        </div>
+        <div class="hero-input-wrapper">
+          <input type="text" class="hero-input" />
+          <button type="button" class="btn">Search</button>
+        </div>
+      </section>
+
+      <section class="events container">
+        <h2 class="search-title">Search for “Antti Tuisku”</h2>
+        <ul class="events-list">
+          <li class="events-item">
+            <img
+              src="https://planetofhotels.com/guide/sites/default/files/styles/paragraph__live_banner__lb_image__1880bp/public/live_banner/Helsinki-1.jpg"
+              alt=""
+              width="200"
+              height="auto"
+            />
+            <h3 class="events-item-title">Product name</h3>
+            <p class="events-item-category">category</p>
+          </li>
+          <li class="events-item">
+            <img
+              src="https://planetofhotels.com/guide/sites/default/files/styles/paragraph__live_banner__lb_image__1880bp/public/live_banner/Helsinki-1.jpg"
+              alt=""
+              width="200"
+              height="auto"
+            />
+            <h3 class="events-item-title">Product name</h3>
+            <p class="events-item-category">category</p>
+          </li>
+          <li class="events-item">
+            <img
+              src="https://planetofhotels.com/guide/sites/default/files/styles/paragraph__live_banner__lb_image__1880bp/public/live_banner/Helsinki-1.jpg"
+              alt=""
+              width="200"
+              height="auto"
+            />
+            <h3 class="events-item-title">Product name</h3>
+            <p class="events-item-category">category</p>
+          </li>
+          <li class="events-item">
+            <img
+              src="https://planetofhotels.com/guide/sites/default/files/styles/paragraph__live_banner__lb_image__1880bp/public/live_banner/Helsinki-1.jpg"
+              alt=""
+              width="200"
+              height="auto"
+            />
+            <h3 class="events-item-title">Product name</h3>
+            <p class="events-item-category">category</p>
+          </li>
+          <li class="events-item">
+            <img
+              src="https://planetofhotels.com/guide/sites/default/files/styles/paragraph__live_banner__lb_image__1880bp/public/live_banner/Helsinki-1.jpg"
+              alt=""
+              width="200"
+              height="auto"
+            />
+            <h3 class="events-item-title">Product name</h3>
+            <p class="events-item-category">category</p>
+          </li>
+          <li class="events-item">
+            <img
+              src="https://planetofhotels.com/guide/sites/default/files/styles/paragraph__live_banner__lb_image__1880bp/public/live_banner/Helsinki-1.jpg"
+              alt=""
+              width="200"
+              height="auto"
+            />
+            <h3 class="events-item-title">Product name</h3>
+            <p class="events-item-category">category</p>
+          </li>
+          <li class="events-item">
+            <img
+              src="https://planetofhotels.com/guide/sites/default/files/styles/paragraph__live_banner__lb_image__1880bp/public/live_banner/Helsinki-1.jpg"
+              alt=""
+              width="200"
+              height="auto"
+            />
+            <h3 class="events-item-title">Product name</h3>
+            <p class="events-item-category">category</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
 </html>
