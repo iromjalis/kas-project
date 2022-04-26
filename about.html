@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About us</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/container.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/scroll.css">
+  </head>
+
+  <body>
+    <header class="header container">
+      <a href="/" rel="noopener noreferrer" class="logo">
+        <img src="./images/Logo.png" alt="logo icon" width="16" height="16" />
+        KAS
+      </a>
+
+      <!-- Burger menu -->
+      <button
+        type="button"
+        data-menu-button
+        class="menu-button"
+        aria-expanded="false"
+        aria-controls="menu"
+      >
+        <svg
+          class="burger-menu"
+          width="24"
+          height="18"
+          aria-label="Menu switcher"
+        >
+          <use
+            class="icon-menu"
+            width="24"
+            height="16"
+            href="./images/SVG/symbol-defs.svg#icon-menu"
+          ></use>
+          <use
+            class="icon-cross"
+            width="18"
+            height="18"
+            href="./images/SVG/symbol-defs.svg#icon-cross"
+          ></use>
+        </svg>
+      </button>
+
+      <div class="menu-container" data-menu>
+        <nav>
+          <ul class="site-nav">
+            <li>
+              <a
+                href="index.html"
+                class="nav-link active"
+                rel="noopener noreferrer"
+                >Search</a
+              >
+            </li>
+            <li>
+              <a
+                href="events.html"
+                class="nav-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                >My events</a
+              >
+            </li>
+            <li>
+              <a
+                href="about.html"
+                class="nav-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="http://"
+                class="nav-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Contact us</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="signIn-wrapper">
+          <button type="button" class="signIn-btn btn">Sign in</button>
+          <span
+            class="icon-person"
+            href="/"
+            target="_blank"
+            rel="noopener noreferrer Nofollow"
+          >
+            <svg class="icon-person-svg" width="20" height="20">
+              <use href="./images/SVG/symbol-defs.svg#icon-person"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      
+    </main>
+
+    <script src="./js/menu.js"></script>
+  </body>
+</html>
