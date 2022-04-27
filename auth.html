@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Authorization</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/container.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <header class="header container">
+      <a href="/" target="_blank" rel="noopener noreferrer" class="logo">
+        <img src="./images/Logo.png" alt="logo icon" width="16" height="16" />
+        Logo
+      </a>
+
+      <!-- Burger menu -->
+      <button
+        type="button"
+        class="menu-button"
+        aria-expanded="false"
+        aria-controls="menu"
+      >
+        <svg
+          class="burger-menu"
+          data-menu-button
+          width="24"
+          height="18"
+          aria-label="Menu switcher"
+        >
+          <use
+            class="icon-menu"
+            width="24"
+            height="16"
+            href="./images/SVG/sprite.svg#icon-menu"
+          ></use>
+          <use
+            class="icon-cross"
+            width="18"
+            height="18"
+            href="./images/SVG/sprite.svg#icon-close"
+          ></use>
+        </svg>
+      </button>
+
+      <nav>
+        <ul class="site-nav">
+          <li>
+            <a
+              href="http://"
+              class="nav-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Search</a
+            >
+          </li>
+          <li>
+            <a
+              href="http://"
+              class="nav-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              >My events</a
+            >
+          </li>
+          <li>
+            <a
+              href="http://"
+              class="nav-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="http://"
+              class="nav-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Contact us</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="signIn-wrapper">
+        <a href="/auth.html" type="button" class="signIn-btn btn">Sign in</a>
+        <a
+          class="icon-person"
+          href="https://www.linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer Nofollow"
+        >
+          <svg class="icon-person-svg" width="20" height="20">
+            <use href="./images/SVG/symbol-defs.svg#icon-person"></use>
+          </svg>
+        </a>
+      </div>
+    </header>
+    <div class="container">
+        <h3 class="text-center my-5">Authorization</h3>
+        <div class="col-sm-5 mx-auto">
+            <form onsubmit="sendForm(this); return false;">
+                <div class="mb-3">
+                    <input name="email" type="text" class="form-control" placeholder="E-mail">
+                </div>
+                <div class="mb-3">
+                    <input name="pass" type="password" class="form-control" placeholder="Password">
+                    <p id="info" style="color: red"></p>
+                </div>
+                <div class="mb-3">
+                    <input type="submit" class="form-control btn btn-primary" value="Login">
+                </div>
+            </form>
+            Not registered? <a href="register.html">Create an account</a>
+            <p>
+              Sign in with 
+              <a href="https://github.com/login/oauth/authorize?client_id=02d64ec29c645abfe088&redirect_uri=http://ppochtpl.beget.tech/oauth-githud.php&scope=user&response_type=code&state=">GitHub</a> 
+              or Google
+              </p>
+        </div>
+    </div>
+    <script>
+        fetch('/php/getUserData.php').then(response=>response.json()).then(result=>{
+          if(result.result == "success"){
+            location.href = "/profile.html";
+          }
+        });
+        function sendForm(form){
+          const info = document.getElementById('info')
+          const formData = new FormData(form);
+          fetch('/php/handlerAuth.php', {
+              method: "post",
+              body: formData
+          }).then(response=>response.json())
+              .then(result=>{
+                  if(result.result == "success"){
+                    location.href = "/profile.html";
+                  }else if(result.result == "input_empty"){
+                    info.innerText = "Not all fields are filled";
+                  }else{
+                      info.innerText = "Incorrect login or password";
+                  }
+              })
+        }
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>

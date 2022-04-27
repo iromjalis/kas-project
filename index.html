@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tapahtumat</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,34 +14,25 @@
     <link rel="stylesheet" href="./css/container.css" />
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/scroll.css">
   </head>
 
   <body>
     <header class="header container">
-      <a href="/" rel="noopener noreferrer" class="logo">
+      <a href="/" target="_blank" rel="noopener noreferrer" class="logo">
         <img src="./images/Logo.png" alt="logo icon" width="16" height="16" />
-        KAS
+        Logo
       </a>
-      <!--<section>
-        <input type="text" id="hakuteksti" name="search">
-        <button id="hakunappi">search</button>
-      </section>
-          <div id="haku">
-            <script src="MyHelsinki.js">
-              'use strict'
-            </script>
-          </div>-->
+
       <!-- Burger menu -->
       <button
         type="button"
-        data-menu-button
         class="menu-button"
         aria-expanded="false"
         aria-controls="menu"
       >
         <svg
           class="burger-menu"
+          data-menu-button
           width="24"
           height="18"
           aria-label="Menu switcher"
@@ -53,70 +41,69 @@
             class="icon-menu"
             width="24"
             height="16"
-            href="./images/SVG/symbol-defs.svg#icon-menu"
+            href="./images/SVG/sprite.svg#icon-menu"
           ></use>
           <use
             class="icon-cross"
             width="18"
             height="18"
-            href="./images/SVG/symbol-defs.svg#icon-cross"
+            href="./images/SVG/sprite.svg#icon-close"
           ></use>
         </svg>
       </button>
 
-      <div class="menu-container" data-menu>
-        <nav>
-          <ul class="site-nav">
-            <li>
-              <a
-                href="/"
-                class="nav-link active"
-                rel="noopener noreferrer"
-                >Search</a
-              >
-            </li>
-            <li>
-              <a
-                href="events.html"
-                class="nav-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                >My events</a
-              >
-            </li>
-            <li>
-              <a
-                href="about.html"
-                class="nav-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                >About</a
-              >
-            </li>
-            <li>
-              <a
-                href="contact.html"
-                class="nav-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Contact us</a
-              >
-            </li>
-          </ul>
-        </nav>
-        <div class="signIn-wrapper">
-          <button type="button" class="signIn-btn btn">Sign in</button>
-          <span
-            class="icon-person"
-            href="/"
-            target="_blank"
-            rel="noopener noreferrer Nofollow"
-          >
-            <svg class="icon-person-svg" width="20" height="20">
-              <use href="./images/SVG/symbol-defs.svg#icon-person"></use>
-            </svg>
-          </a>
-        </div>
+      <nav>
+        <ul class="site-nav">
+          <li>
+            <a
+              href="http://"
+              class="nav-link active"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Search</a
+            >
+          </li>
+          <li>
+            <a
+              href="http://"
+              class="nav-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              >My events</a
+            >
+          </li>
+          <li>
+            <a
+              href="http://"
+              class="nav-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="http://"
+              class="nav-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Contact us</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="signIn-wrapper">
+        <a href="/auth.html" type="button" class="signIn-btn btn">Sign in</a>
+        <a
+          class="icon-person"
+          href="https://www.linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer Nofollow"
+        >
+          <svg class="icon-person-svg" width="20" height="20">
+            <use href="./images/SVG/symbol-defs.svg#icon-person"></use>
+          </svg>
+        </a>
       </div>
     </header>
     <main>
@@ -216,109 +203,5 @@
         </ul>
       </section>
     </main>
-  <footer id="contacts" class="footer">
-    <div class="container">
-      <div class="tablet-container wrapper">
-        <ul class="address-list">
-      
-          <li class="address-item">
-            <a href="/" rel="noopener noreferrer" class="logo address-link">
-              <img src="./images/Logo.png" alt="logo icon" width="16" height="16" />KAS
-            </a>          
-          </li>
-          <li class="address-item">
-              <a href="/"
-                class="nav-link active"
-                rel="noopener noreferrer"
-                >Search</a
-              >          
-          </li>
-          <li class="address-item">
-            <a
-                href="events.html"
-                class="nav-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                >My events</a
-              >
-          </li>
-          <li class="address-item">
-            <a
-                href="about.html"
-                class="nav-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                >About</a
-              >
-          </li>
-          <li class="address-item">
-            <a
-                href="contact.html"
-                class="nav-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Contact us</a
-              >
-          </li>
-        </ul>
-      </div>
-      <!-- JOIN US  -->
-      <div class="join-us-section wrapper ">
-        <p class="join-us-title">Subscribe</p>
-        <!-- social media-->
-        <div class="social-section-footer">
-          <ul class="social-list-footer">
-            <li class="social-item-footer">
-              <a class="social-link-footer" href="https://www.instagram.com" target="_blank"
-                rel="noopener noreferrer Nofollow">
-                <svg class="social-icon-footer" width="20" height="20">
-                  <use href="./images/SVG/symbol-defs.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-item-footer">
-              <a class="social-link-footer" href="https://www.twitter.com" target="_blank"
-                rel="noopener noreferrer Nofollow">
-                <svg class="social-icon-footer" width="20" height="20">
-                  <use href="./images/SVG/symbol-defs.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-item-footer">
-              <a class="social-link-footer" href="https://www.facebook.com" target="_blank"
-                rel="noopener noreferrer Nofollow">
-                <svg class="social-icon-footer" width="20" height="20">
-                  <use href="./images/SVG/symbol-defs.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-item-footer">
-              <a class="social-link-footer" href="https://www.linkedin.com" target="_blank"
-                rel="noopener noreferrer Nofollow">
-                <svg class="social-icon-footer" width="20" height="20">
-                  <use href="./images/SVG/symbol-defs.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Subscribe -->
-      <div class="subscription wrapper">
-        <strong class="subscription-title">Subscribe to newsletter</strong>
-
-        <form class="subscription-form">
-          <input class="colortext" type="email" name="mail" id="email" autocomplete="on" placeholder="E-mail" />
-
-          <button class="footer btn">
-            Subscribe
-            <img src="./images/twitter-footer.png" alt="лого твиттера" width="24" height="24" />
-          </button>
-        </form>
-      </div>
-    </div>
-  </footer>
-    <script src="./js/menu.js"></script>
   </body>
 </html>
