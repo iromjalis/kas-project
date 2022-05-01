@@ -10,10 +10,10 @@ async function naytaSivu () {
     // toinen tapa tehdä: const haku = document.getElementById('hakuteksti').value;
     const testi = ` ${haku.value}`
     const vastaus = await fetch(
-        'https://api.hel.fi/linkedevents/v1/search/ search/?type=event&q=' + testi);
+        'https://api.hel.fi/linkedevents/v1/search/search/?type=event&q=' + testi);
     if (!vastaus.ok) throw new Error('jokin meni pieleen');
     const sivu = await vastaus.json();
-    console.log(sivu);
+    console.log(position);
     tallennaTiedot(sivu);
 
   } catch (error) {
