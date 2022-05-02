@@ -112,7 +112,7 @@ function init(result) {
   }
   paivitaKartta(paikka);
   lisaaMarker(paikka, 'Olen tässä', punainenIkoni);
-  searchForPlace(paikka);
+  haeLatauspisteet(paikka);
 }
 
 function paivitaKartta(crd) {
@@ -141,7 +141,7 @@ map.on('zoom', function() {
 });
 
 
-function searchForPlace(crd) {
+function haeLatauspisteet(crd) {
       const teksti = crd.info;
       const koordinaatit = {
         latitude: crd.latitude,

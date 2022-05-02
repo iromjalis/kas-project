@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tapahtumat</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">-->
+    <script src="https://kit.fontawesome.com/750282b7c8.js" crossorigin="anonymous"></script>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
@@ -42,10 +43,23 @@
         border-radius: 50%;
         line-height: 30px;
       }
+      #themeSwitcher{
+        position: absolute;
+        top: 10rem;
+        left: 0;
+        padding: 1rem;
+        background: #e5e5e5;
+        cursor: pointer;
+        border-radius: 0 10px 10px 0;
+      }
+      #themeSwitcher:hover{
+        box-shadow: 0 0 2px 2px #9f72ff;
+      }
     </style>
   </head>
 
   <body>
+    <div id="themeSwitcher" data-target="day"><i class="fas fa-moon"></i></div>
     <header class="header container">
       <a href="/" rel="noopener noreferrer" class="logo">
         <img src="./images/Logo.png" alt="logo icon" width="16" height="16" />
@@ -338,7 +352,7 @@
     <!-- Button trigger modal -->
 
   <!-- Modal -->
-  <div class="modal fade" id="mapsModal" tabindex="-1" aria-labelledby="mapsModalLabel" aria-hidden="true">
+  <!--<div class="modal fade" id="mapsModal" tabindex="-1" aria-labelledby="mapsModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -357,12 +371,52 @@
         </div>
       </div>
     </div>
-  </div>
+  </div>-->
   </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.3/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script> 
     <script src="./js/menu.js"></script>
     <script src="./js/MyHelsinki.js"></script>
+    <script>
+      let themeSwitcher = document.getElementById('themeSwitcher');
+      let theme = localStorage.getItem('theme')!=null?localStorage.getItem('theme'):themeSwitcher.dataset.target;
+      changeTheme();
+      themeSwitcher.onclick = ()=>{
+        if(theme == "day"){
+          theme = "night";
+          themeSwitcher.dataset.target = theme;
+          localStorage.setItem("theme", theme);
+        }else{
+          theme = "day";
+          localStorage.setItem("theme", theme);
+          themeSwitcher.dataset.target = theme;
+        }
+        changeTheme();
+      }
+      function changeTheme(){
+        if(theme == "night"){
+          themeSwitcher.innerHTML = `<i class="fas fa-sun"></i>`;
+          themeSwitcher.style.background = "#35424C";
+          body.style.background =  '#1B252C';
+          document.querySelector('.hero-title').style.color = "#FFFFFF";
+          document.querySelector('.logo').style.color = "#9DAFBD";
+          document.querySelector('.hero-input-wrapper').style.background = "#35424C";
+          document.querySelector('.hero-input').style.border = "1px solid #47545E";
+          document.querySelector('.hero-input').style.background = "#35424C";
+          document.querySelector('.hero-input').style.color = "#9DAFBD";
+        }else{
+          themeSwitcher.innerHTML = `<i class="fas fa-moon"></i>`;
+          themeSwitcher.style.background = "#e5e5e5";
+          body.style.background =  '#ffffff';
+          document.querySelector('.hero-title').style.color = "";
+          document.querySelector('.logo').style.color = "";
+          document.querySelector('.hero-input-wrapper').style.background = "";
+          document.querySelector('.hero-input').style.border = "";
+          document.querySelector('.hero-input').style.background = "";
+          document.querySelector('.hero-input').style.color = "";
+        }
+      }
+    </script>
   </body>
 </html>
