@@ -1,0 +1,83 @@
+.lightbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--animation-duration) var(--timing-function);
+}
+.lightbox.is-open {
+  opacity: 1;
+  pointer-events: all;
+  background-color: #fff;
+  color: black;
+}
+
+.lightbox__overlay {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100vh;
+  width: 100vw;
+}
+
+.lightbox__image {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: 80vh;
+  background-color: #fff;
+  padding: 25px;
+  font-size: 24px;
+}
+
+.lightbox__button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 47px;
+  height: 47px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color var(--animation-duration) var(--timing-function);
+  outline: none;
+  background-image: url("../images/icon-close.svg");
+  background-position: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+.lightbox__button:hover,
+.lightbox__button:focus {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.lightbox__image.is-open,
+.lightbox.is-open,
+.lightbox__button.is-open {
+  opacity: 1;
+}
+
+#map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+}
