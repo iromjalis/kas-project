@@ -109,8 +109,35 @@
         </div>
       </div>
     </header>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      label {
+        display: block;
+        margin-bottom: .2em;
+      }
+    </style>
     <main>
-      <br><center><img src="./images/patsas.jpg" width="550px" alt="statue"></center>
+      <br><center></p>
+    <p><form name="contact" method="POST" data-netlify="true">
+        <p>
+          <label for="name">Nimi</label>
+          <input type="text" id="name" name="name" />
+        </p>
+        <p>
+          <label for="email">Sähköposti</label>
+          <input type="text" id="email" name="email" />
+        </p>
+        <p>
+          <label for="message">Viesti</label>
+          <textarea id="message" name="message"></textarea>
+        </p>
+        <p>
+          <button type="submit">Lähetä</button>
+        </p>
+      </form></p>
+      <p><br></p><img src="./images/patsas.jpg" width="550px" alt="statue"></center>
     </main>
   <footer id="contacts" class="footer">
     <div class="container">
