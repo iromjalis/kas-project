@@ -4,12 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tapahtumat</title>
-    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">-->
     <script
       src="https://kit.fontawesome.com/750282b7c8.js"
       crossorigin="anonymous"
     ></script>
-    <script src="slideshow.js"></script>
+    <!-- <script src="slideshow.js"></script> -->
 
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
@@ -27,12 +26,15 @@
     <link rel="stylesheet" href="./css/scroll.css" />
     <link rel="stylesheet" href="./css/modal.css" />
     <link rel="stylesheet" href="./css/lightmode.css" />
-
   </head>
 
   <body>
+    <!-- light ja dark mode switcher -->
     <div id="themeSwitcher" data-target="day"><i class="fas fa-moon"></i></div>
+    <!-- HEADER -->
+
     <header class="header container">
+      <!-- Header Logo -->
       <a href="/" rel="noopener noreferrer" class="logo">
         <img src="./images/Logo.png" alt="logo icon" width="16" height="16" />
         KAS
@@ -69,49 +71,44 @@
       <div class="menu-container" data-menu>
         <!-- header navigation -->
         <nav>
+          <!-- koko projektin navigation -->
           <ul class="site-nav">
+            <!-- linkki Search sivustoon -->
             <li>
               <a href="/" class="nav-link active" rel="noopener noreferrer"
                 >Search</a
               >
             </li>
+            <!-- linkki My events sivustoon -->
             <li>
-              <a
-                href="events.html"
-                class="nav-link"
-                rel="noopener noreferrer"
+              <a href="events.html" class="nav-link" rel="noopener noreferrer"
                 >My events</a
               >
             </li>
+            <!-- linkki About sivustoon -->
             <li>
-              <a
-                href="about.html"
-                class="nav-link"
-                rel="noopener noreferrer"
+              <a href="about.html" class="nav-link" rel="noopener noreferrer"
                 >About</a
               >
             </li>
+            <!-- linkki Contact us sivustoon -->
             <li>
-              <a
-                href="contact.html"
-                class="nav-link"
-                rel="noopener noreferrer"
+              <a href="contact.html" class="nav-link" rel="noopener noreferrer"
                 >Contact us</a
               >
             </li>
           </ul>
         </nav>
-        <!-- <div class="signIn-wrapper"> -->
+        <!-- SIGN IN button -->
         <a href="auth.html" class="signIn-wrapper">
           <button type="button" class="btn">Sign in</button>
-
+          <!-- person icon -->
           <span class="icon-person">
             <svg class="icon-person-svg" width="20" height="20">
               <use href="./images/SVG/symbol-defs.svg#icon-person"></use>
             </svg>
           </span>
         </a>
-        <!-- </div> -->
       </div>
     </header>
     <main>
@@ -121,37 +118,49 @@
             <h1 class="hero-title">Discover best events</h1>
             <span class="hero-title-small">All over the Helsinki</span>
           </div>
-          <img
-            src="./images/kirkko.jpg"
-            class="hero-img"
-          />
+          <img src="./images/kirkko.jpg" class="hero-img" />
         </div>
         <div class="hero-input-wrapper">
-          <input type="text" class="hero-input" id="hakuteksti" />
-          <button type="button" class="btn" id="button">Search</button>
+          <input
+            type="text"
+            class="hero-input"
+            id="hakuteksti"
+            placeholder="esim Helsinki"
+          />
+          <button type="button" class="btn" id="searchButton">Search</button>
         </div>
       </section>
 
       <section class="events container">
         <h2 class="search-title"></h2>
-        <ul class="events-list js-gallery">
-          <!-- <li class="events-item">
-            <img
-              src="https://planetofhotels.com/guide/sites/default/files/styles/paragraph__live_banner__lb_image__1880bp/public/live_banner/Helsinki-1.jpg"
-              alt=""
-              width="200"
-              height="150"
-            />
-            <h3 class="events-item-title">Product name</h3>
-            <p class="events-item-category">category</p>
-          </li> -->
-        </ul>
+        <ul class="events-list js-gallery"></ul>
       </section>
+      <!-- Kaisan video ja suunnitelma -->
+      <div class="videoWrapper">
+        <video width="520" height="340" controls class="video">
+          <source src="./images/KAS.mp4" type="video/mp4" />
+          <source src="movie.ogg" type="video/ogg" />
+          Your browser does not support the video tag.
+          <iframe
+            width="560"
+            height="315"
+            src="https://youtu.be/vY6_szSSiKQ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </video>
+        <p><a href="Video.html"> Videon Suunnitelmat</a></p>
+      </div>
     </main>
+    <!-- footer -->
     <footer id="contacts" class="footer">
       <div class="container">
         <div class="tablet-container wrapper">
+          <!-- sivun navigation -->
           <ul class="address-list">
+            <!-- linkki Search sivustoon -->
             <li class="address-item">
               <a href="/" rel="noopener noreferrer" class="logo address-link">
                 <img
@@ -162,32 +171,27 @@
                 />KAS
               </a>
             </li>
+            <!-- linkki Search sivustoon -->
             <li class="address-item">
               <a href="/" class="nav-link active" rel="noopener noreferrer"
                 >Search</a
               >
             </li>
+            <!-- linkki My events sivustoon -->
             <li class="address-item">
-              <a
-                href="events.html"
-                class="nav-link"
-                rel="noopener noreferrer"
-                >My events</a
-              >
+              <a href="events.html" class="nav-link" rel="noopener noreferrer">
+                My events
+              </a>
             </li>
+            <!-- linkki About sivustoon -->
             <li class="address-item">
-              <a
-                href="about.html"
-                class="nav-link"
-                rel="noopener noreferrer"
+              <a href="about.html" class="nav-link" rel="noopener noreferrer"
                 >About</a
               >
             </li>
+            <!-- linkki Contact us sivustoon -->
             <li class="address-item">
-              <a
-                href="contact.html"
-                class="nav-link"
-                rel="noopener noreferrer"
+              <a href="contact.html" class="nav-link" rel="noopener noreferrer"
                 >Contact us</a
               >
             </li>
@@ -199,6 +203,7 @@
           <!-- social media-->
           <div class="social-section-footer">
             <ul class="social-list-footer">
+              <!-- instagram linkki ja icon -->
               <li class="social-item-footer">
                 <a
                   class="social-link-footer"
@@ -213,6 +218,7 @@
                   </svg>
                 </a>
               </li>
+              <!-- twitter linkki ja icon -->
               <li class="social-item-footer">
                 <a
                   class="social-link-footer"
@@ -225,6 +231,7 @@
                   </svg>
                 </a>
               </li>
+              <!-- facebook linkki ja icon -->
               <li class="social-item-footer">
                 <a
                   class="social-link-footer"
@@ -239,6 +246,7 @@
                   </svg>
                 </a>
               </li>
+              <!-- twitter linkedin ja icon -->
               <li class="social-item-footer">
                 <a
                   class="social-link-footer"
@@ -257,7 +265,7 @@
           </div>
         </div>
 
-        <!-- Subscribe -->
+        <!-- Subscribe form footer-->
         <div class="subscription wrapper">
           <strong class="subscription-title">Subscribe to newsletter</strong>
 
@@ -271,11 +279,12 @@
               placeholder="E-mail"
             />
 
-            <button class="footer btn">
+            <button class="footer btn" id="footerBtn">
               Subscribe
               <img
                 src="./images/twitter-footer.png"
-                alt="twitter logo"
+                alt="send icon"
+                class="footer-btn"
                 width="24"
                 height="24"
               />
@@ -307,51 +316,7 @@
     <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
     <script src="./js/menu.js"></script>
     <script src="./js/MyHelsinki.js"></script>
-    <script src="./js/modal.js"></script>
-    <script>
-      let themeSwitcher = document.getElementById("themeSwitcher");
-      let theme =
-        localStorage.getItem("theme") != null
-          ? localStorage.getItem("theme")
-          : themeSwitcher.dataset.target;
-      changeTheme();
-      themeSwitcher.onclick = () => {
-        if (theme == "day") {
-          theme = "night";
-          themeSwitcher.dataset.target = theme;
-          localStorage.setItem("theme", theme);
-        } else {
-          theme = "day";
-          localStorage.setItem("theme", theme);
-          themeSwitcher.dataset.target = theme;
-        }
-        changeTheme();
-      };
-      function changeTheme() {
-        if (theme == "night") {
-          themeSwitcher.innerHTML = `<i class="fas fa-sun"></i>`;
-          themeSwitcher.style.background = "#35424C";
-          body.style.background = "#1B252C";
-          document.querySelector(".hero-title").style.color = "#FFFFFF";
-          document.querySelector(".logo").style.color = "#9DAFBD";
-          document.querySelector(".hero-input-wrapper").style.background =
-            "#35424C";
-          document.querySelector(".hero-input").style.border =
-            "1px solid #47545E";
-          document.querySelector(".hero-input").style.background = "#35424C";
-          document.querySelector(".hero-input").style.color = "#9DAFBD";
-        } else {
-          themeSwitcher.innerHTML = `<i class="fas fa-moon"></i>`;
-          themeSwitcher.style.background = "#e5e5e5";
-          body.style.background = "#ffffff";
-          document.querySelector(".hero-title").style.color = "";
-          document.querySelector(".logo").style.color = "";
-          document.querySelector(".hero-input-wrapper").style.background = "";
-          document.querySelector(".hero-input").style.border = "";
-          document.querySelector(".hero-input").style.background = "";
-          document.querySelector(".hero-input").style.color = "";
-        }
-      }
-    </script>
+    <!-- <script src="./js/modal.js"></script> -->
+    <script src="./js/themeSwitcher.js"></script>
   </body>
 </html>
