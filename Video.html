@@ -1,25 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About us</title>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+            rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/container.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/scroll.css">
+    <link rel="stylesheet" href="./css/lightmode.css" />
 </head>
-<h1> Videon suunnittelu</h1>
 
 <body>
-<h3>Videon tavoite: Tavoitteena on herättää käyttäjälle tekemämme sovelluksen helppokäyttöisyys, osoittaa käyttäjälle, kuinka laajasti MyHelsinki tarjoaa tapahtumia ja välttämättä ei tarvitse ennen Helsinkiin saapumista varata tai tiedostaa mitä kaikkia tapahtumia on käynnissä.</h3>
+<header class="header container">
+    <a href="/" rel="noopener noreferrer" class="logo">
+        <img src="./images/Logo.png" alt="logo icon" width="16" height="16" />
+        KAS
+    </a>
 
-<h3>Videon kohderyhmä on tapahtumien suurkuluttajat, jotka nauttivat erilaisissa miljöissä varsinkin live-musiikista. </h3>
+    <!-- Burger menu -->
+    <button
+            type="button"
+            data-menu-button
+            class="menu-button"
+            aria-expanded="false"
+            aria-controls="menu"
+    >
+        <svg
+                class="burger-menu"
+                width="24"
+                height="18"
+                aria-label="Menu switcher"
+        >
+            <use
+                    class="icon-menu"
+                    width="24"
+                    height="16"
+                    href="./images/SVG/symbol-defs.svg#icon-menu"
+            ></use>
+            <use
+                    class="icon-cross"
+                    width="18"
+                    height="18"
+                    href="./images/SVG/symbol-defs.svg#icon-cross"
+            ></use>
+        </svg>
+    </button>
 
-<h3>Suunnittelu: Kaikilla heräsi ajatus siitä, että video toteutetaan Helsingin ytimessä. Osalta porukasta löytyi jo hyviä videoklippejä Helsingissä vietetyistä tapahtumista ja päätimme niitä hyödyntää, kun näin opiskelijoina ei rahallisesti ollut varaa mennä varta vasten johonkin tapahtumaan kuvamaan. Sovelluksen perusrakenne toimi jo hyvin mobiililaitteella, joten halusimme esitellä sitä videolla ja se tämän videon pääpointtina olikin.</h3>
+    <div class="menu-container" data-menu>
+        <nav>
+            <ul class="site-nav">
+                <li>
+                    <a
+                            href="index.html"
+                            class="nav-link"
+                            rel="noopener noreferrer"
+                    >Search</a
+                    >
+                </li>
+                <li>
+                    <a
+                            href="events.html"
+                            class="nav-link"
+                            rel="noopener noreferrer"
+                    >My events</a
+                    >
+                </li>
+                <li>
+                    <a
+                            href="about.html"
+                            class="nav-link"
+                            rel="noopener noreferrer"
+                    >About</a
+                    >
+                </li>
+                <li>
+                    <a
+                            href="contact.html"
+                            class="nav-link"
+                            rel="noopener noreferrer"
+                    >Contact us</a
+                    >
+                </li>
+            </ul>
+        </nav>
+        <div class="signIn-wrapper">
+            <a href="auth.html" type="button" class="signIn-btn btn">Sign in</a>
+            <span
+                    class="icon-person"
+                    href="/"
+                    rel="noopener noreferrer Nofollow"
+            >
+            <svg class="icon-person-svg" width="20" height="20">
+              <use href="./images/SVG/symbol-defs.svg#icon-person"></use>
+            </svg>
+                </a>
+          </span>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="hero container">
+        <center>
+    <h1> Videon suunnittelu</h1><br>
 
-<h3>Videon puhuttu teksti suunniteltiin, sillä ajatuksella että henkilö saapuu vähän kauempaa esim. Espoo, Helsinkiin vailla ajatusta mitä hän voisikaan tehdä. Kuin salamakirkkaalta taivaalta hän muisti uuden KAS-sovelluksen olemassaolon ja päätti testata sitä. Haku kriteerinä oli musiikki ja siitä päästiinkin erilaisiin tapahtumiin, jotka henkilö löysi sovelluksen kautta. Osa tapahtumista oli ilmaisia ja joihinkin piti ostaa lippu. Videon ääninäyttelijä osasi tämän pohjalta muodostaa lauseita, ja yhdessä tuumien päätimme mikä kuulostaisi parhaimmalta. Näytteitä otettiin noin 15 kappaletta.</h3>
+    <text align="left">Videon tavoite: Tavoitteena on herättää käyttäjälle tekemämme sovelluksen helppokäyttöisyys, osoittaa käyttäjälle, kuinka laajasti MyHelsinki tarjoaa tapahtumia ja välttämättä ei tarvitse ennen Helsinkiin saapumista varata tai tiedostaa mitä kaikkia tapahtumia on käynnissä.<br>
 
-<img src="./images/Kuva1.png" width="500" > <br>
+    <br>Videon kohderyhmä on tapahtumien suurkuluttajat, jotka nauttivat erilaisissa miljöissä varsinkin live-musiikista.<br>
 
-<img src="./images/Kuva2.png" width="500"> <br>
+    <br>Suunnittelu: Kaikilla heräsi ajatus siitä, että video toteutetaan Helsingin ytimessä. Osalta porukasta löytyi jo hyviä videoklippejä Helsingissä vietetyistä tapahtumista ja päätimme niitä hyödyntää, kun näin opiskelijoina ei rahallisesti ollut varaa mennä varta vasten johonkin tapahtumaan kuvamaan. Sovelluksen perusrakenne toimi jo hyvin mobiililaitteella, joten halusimme esitellä sitä videolla ja se tämän videon pääpointtina olikin.<br>
 
-<img src="./images/Kuva3.png" width="500"> <br>
+    <br>Videon puhuttu teksti suunniteltiin sillä ajatuksella, että henkilö saapuu vähän kauempaa esim. Espoo, Helsinkiin vailla ajatusta mitä hän voisikaan tehdä. Kuin salamakirkkaalta taivaalta hän muisti uuden KAS-sovelluksen olemassaolon ja päätti testata sitä. Haku kriteerinä oli musiikki ja siitä päästiinkin erilaisiin tapahtumiin, jotka henkilö löysi sovelluksen kautta. Osa tapahtumista oli ilmaisia ja joihinkin piti ostaa lippu. Videon ääninäyttelijä osasi tämän pohjalta muodostaa lauseita, ja yhdessä tuumien päätimme mikä kuulostaisi parhaimmalta. Näytteitä otettiin noin 15 kappaletta.<br>
 
+   <br><img src="./images/Kuva1.png" width="500" > <br>
+
+    <img src="./images/Kuva2.png" width="500"> <br>
+
+    <img src="./images/Kuva3.png" width="500"> <br>
+        </center>
+    </section>
+</main>
+<footer id="contacts" class="footer">
+    <div class="container">
+        <div class="tablet-container wrapper">
+            <ul class="address-list">
+
+                <li class="address-item">
+                    <a href="/" rel="noopener noreferrer" class="logo address-link">
+                        <img src="./images/Logo.png" alt="logo icon" width="16" height="16" />KAS
+                    </a>
+                </li>
+                <li class="address-item">
+                    <a href="/"
+                       class="nav-link "
+                       rel="noopener noreferrer"
+                    >Search</a
+                    >
+                </li>
+                <li class="address-item">
+                    <a
+                            href="events.html"
+                            class="nav-link"
+                            rel="noopener noreferrer">
+                        My events
+                    </a>
+                </li>
+                <li class="address-item">
+                    <a
+                            href="about.html"
+                            class="nav-link"
+                            rel="noopener noreferrer"
+                    >About</a
+                    >
+                </li>
+                <li class="address-item">
+                    <a
+                            href="contact.html"
+                            class="nav-link active"
+                            rel="noopener noreferrer"
+                    >Contact us</a
+                    >
+                </li>
+            </ul>
+        </div>
+        <!-- JOIN US  -->
+        <div class="join-us-section wrapper ">
+            <p class="join-us-title">Subscribe</p>
+            <!-- social media-->
+            <div class="social-section-footer">
+                <ul class="social-list-footer">
+                    <li class="social-item-footer">
+                        <a class="social-link-footer" href="https://www.instagram.com" target="_blank"
+                           rel="noopener noreferrer Nofollow">
+                            <svg class="social-icon-footer" width="20" height="20">
+                                <use href="./images/SVG/symbol-defs.svg#icon-instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social-item-footer">
+                        <a class="social-link-footer" href="https://www.twitter.com" target="_blank"
+                           rel="noopener noreferrer Nofollow">
+                            <svg class="social-icon-footer" width="20" height="20">
+                                <use href="./images/SVG/symbol-defs.svg#icon-twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social-item-footer">
+                        <a class="social-link-footer" href="https://www.facebook.com" target="_blank"
+                           rel="noopener noreferrer Nofollow">
+                            <svg class="social-icon-footer" width="20" height="20">
+                                <use href="./images/SVG/symbol-defs.svg#icon-facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social-item-footer">
+                        <a class="social-link-footer" href="https://www.linkedin.com" target="_blank"
+                           rel="noopener noreferrer Nofollow">
+                            <svg class="social-icon-footer" width="20" height="20">
+                                <use href="./images/SVG/symbol-defs.svg#icon-linkedin"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Subscribe -->
+        <div class="subscription wrapper">
+            <strong class="subscription-title">Subscribe to newsletter</strong>
+
+            <form class="subscription-form">
+                <input class="colortext" type="email" name="mail" id="email" autocomplete="on" placeholder="E-mail" />
+
+                <button class="footer btn">
+                    Subscribe
+                    <img src="./images/twitter-footer.png" alt="лого твиттера" width="24" height="24" />
+                </button>
+            </form>
+        </div>
+    </div>
+</footer>
+<script src="./js/menu.js"></script>
 </body>
 </html>
