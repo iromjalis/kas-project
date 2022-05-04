@@ -1,14 +1,14 @@
 "use strict";
+
+//Kaisa on tehnyt fetch, API
 const haku = document.querySelector('input[id="hakuteksti"]');
 const div = document.querySelector('div[id = "tiedot"]');
 const body = document.querySelector("body");
 let nimi, kuvaus, osoite, kuva, genre;
 const ulRef = document.querySelector(".events-list");
 const searchTitle = document.querySelector(".search-title");
-// const video = document.querySelector(".video");
-const videoWrapper = document.querySelector(".videoWrapper");
-
 let itemLocation;
+
 async function naytaSivu() {
   try {
     const haku = document.getElementById("hakuteksti").value;
@@ -21,7 +21,8 @@ async function naytaSivu() {
 
     if (!vastaus.ok) throw new Error("jokin meni pieleen");
     const sivu = await vastaus.json();
-    // console.log("sivu: ", sivu.data);
+
+    //Irina on tehnyt lisäys sivulle
 
     const markup = sivu.data
       .map((item) => {
@@ -34,11 +35,11 @@ async function naytaSivu() {
           images,
           name,
           street_address,
-          postal_code,
           telephone,
-          location_extra_info,
-          search_vector_fi,
         } = item;
+
+        //Irina on tehnyt tarkastus, jos serverista ei ole mitään tullut
+
         address_locality ? (address_locality = address_locality.fi) : "No info";
         description
           ? `<p class="events-item-category">${(description =
@@ -52,6 +53,7 @@ async function naytaSivu() {
         email ? `<p class="events-item-email">${email}</p>` : (email = "");
         provider ? (provider = provider.fi) : (provider = "No info");
 
+        //Antonina on tehnyt location ja kartalle onclick funktio
         itemLocation = item.location["@id"];
 
         return `<li class="events-item"  title="Click to open the map" onclick="window.open('/map.html?${itemLocation}', '_blank');" style="cursor: pointer;">
@@ -62,10 +64,12 @@ async function naytaSivu() {
           </li>`;
       })
       .join(" ");
+    //Irina on tehnyt
+    searchTitle.classList = "search-title";
     searchTitle.textContent = `Search for "${testi}"`;
     ulRef.innerHTML = markup;
 
-    // auto scroll down
+    // Irina on tehnyt auto scroll down
     window.scrollTo({
       top: 700,
 
@@ -79,7 +83,7 @@ const painike = document.querySelector("#searchButton");
 
 painike.addEventListener("click", naytaSivu);
 
-// clicking on footer subscribe button
+// Irina on tehnyt clicking on footer subscribe button
 const footerBtn = document.querySelector("#footerBtn");
 const emailInput = document.querySelector("#email");
 footerBtn.addEventListener("click", () => {

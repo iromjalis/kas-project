@@ -772,3 +772,17 @@ strong {
 .auth.container {
   display: inline-block;
 }
+/* dark mode */
+body.dark * {
+  color: var(--main-bg);
+  fill: var(--accent-color);
+}
+body.dark *:hover {
+  fill: var(--main-bg);
+}
+body.dark .hero-input {
+  background-color: var(--main-bg);
+}
+body.dark .menu-container.is-open {
+  background-color: #1b252c;
+}

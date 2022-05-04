@@ -1,5 +1,5 @@
 "use strict";
-
+//Irina on tehnyt burger/header mobile versio
 (() => {
   const menuBtnRef = document.querySelector("[data-menu-button]");
   const mobileMenuRef = document.querySelector("[data-menu]");
