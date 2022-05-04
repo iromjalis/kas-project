@@ -71,7 +71,7 @@
       </div>
     </header>
     <div class="auth container">
-      <h3 class="text-center my-5">Authorization</h3>
+      <h3 class="text-center my-5 hero-title">Authorization</h3>
       <div class="col-sm-5 mx-auto">
         <form onsubmit="sendForm(this); return false;">
           <div class="mb-3">
@@ -99,14 +99,19 @@
             />
           </div>
         </form>
-        Not registered? <a href="register.html">Create an account</a>
+        Not registered?
+        <a href="register.html" class="accentColor"
+          ><strong>Create an account</strong></a
+        >
         <p>
           Sign in with
           <a
             href="https://github.com/login/oauth/authorize?client_id=02d64ec29c645abfe088&redirect_uri=http://ppochtpl.beget.tech/oauth-githud.php&scope=user&response_type=code&state="
+            class="accentColor"
             >GitHub</a
           >
-          or Google
+          or
+          <span class="accentColor">Google</span>
         </p>
       </div>
     </div>
